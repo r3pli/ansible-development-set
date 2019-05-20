@@ -9,22 +9,22 @@ ansible sources are within the folder src.
 
 If you want to test your written playbooks or roles you can use the wrapper playback:
 
-´´´console
+```console
 ./playit playbooks/[PLAYBOOK-NAME]/main.yml -i environments/[ENV] -e 'example_var=example_value'
-´´´
+```
 
 The wrapper runs your configuration within the ansible-dev docker image. You could also lint your
 configuration with ansible-lint:
 
-´´´console
+```console
 ./lintit playbooks/[PLAYBOOK-NAME]/main.yml
-´´´
+```
 
 You can test your configuration with molecule:
 
-´´´console
+```console
 ./testit test [--scenario-name role-xyz]                                                     
-´´´
+```
 
 All your ansible runs are recorded by ARA and can be viewed on Port 9191. Therefor the docker container
 should not be removed after execution.
