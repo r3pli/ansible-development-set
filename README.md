@@ -34,24 +34,27 @@ should not be removed after execution.
 This repository contains a multistage environment ansible starter kit for developing playbooks and roles.
 The structure within src is:
 
-- ansible.cfg
-- environments
---- 0_global_vars
------ main.yml
---- dev
------ group_vars
-------- all
---------- 0_global_vars -> ../../../0_global_vars
------ hosts.yml
---- ...
-- play
-- playbooks
---- sample
------ main.yml
------ roles
---- ...
-- roles
---- ...
+```
+.
++-- ansible.cfg
++-- environments
+|   +-- 0_global_vars
+|       +-- main.yml
+|   +-- dev
+|       +-- group_vars
+|           +-- all
+|               +-- 0_global_vars -> ../../../0_global_vars
+|       +-- hosts.yml
+|   +-- ...
++-- play
++-- playbooks
+|   +-- sample
+|       +-- main.yml
+|       +-- roles
+|           +-- ...
++-- roles
+|   +-- ...
+```
 
 #### Environments
 Different environments are managed and located within the 'environments' folder. Each sub folder should be named as the stage it represents.
