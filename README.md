@@ -80,6 +80,10 @@ Each Playbook is now located in its own directory and this allows:
 #### Roles
 The roles directory behaves like default Ansible. Roles can be overwritten within a single Playbook (see 'Playbooks').
 
+## Dependencies
+
+* [github docker-ansible-dev](https://github.com/r3pli/docker-ansible-dev) / [docker-hub ansible-dev](https://hub.docker.com/r/r3pli/ansible-dev)
+
 ## License
 
 This project is licensed under the GNU General Public License Version 2 - see the [LICENSE](LICENSE) file for details
