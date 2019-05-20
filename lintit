@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e ;
+set -u ;
+
+docker run --entrypoint ansible-lint --rm -it \
+  -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
+  -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub \
+  -v $(pwd)/src:/ansible \
+  -v /var/log/ansible/ansible.log \
+  r3pli/ansible-dev "$@"
